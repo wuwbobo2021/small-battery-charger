@@ -10,6 +10,10 @@ Actually, STM32F103C8 would be better because its flash is able to store more de
 
 ### Circuit
 
+Notes:
+- The rated power rating of the 0.333 ohm resistor should be large enough;
+- If the bluepill board can be replaced with a dedicated PCB design, GND and AGND shouldn't simply connect together.
+
 ![Circuit](./circuit.png)
 
 MCU Pin Name | Used Name | IO Mode | Configured Function | Note
@@ -34,7 +38,7 @@ cargo run -r
 
 Currently the only usage is to connect the bluepill to the PC via USB, and control the circuit with the VB program provided here.
 
-## TODO
+## Possible improvements
 
 - Add temperature monitoring, and probably more protection in the circuit;
 - Have a better PC-side controller utility;
